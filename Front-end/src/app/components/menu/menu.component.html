@@ -1,0 +1,405 @@
+<div>
+  <ol class="breadcrumb">
+    <li><a [routerLink]="['']" style="font-size: 20px"><button type="button" class='btn btn-outline-info' style="border: 1px solid;border-color:rgb(72, 120, 175)">Home</button></a></li>
+    <li><a routerLink="/menu" style="font-size: 20px"><button type="button" class='btn btn-outline-info' style="border: 1px solid;border-color:rgb(72, 120, 175)">Menu</button></a></li>
+  </ol>
+</div>
+
+<div class="a">
+
+  <div class ="container-fluid">
+    <br><br>
+    <h2>SALES   ITEMS</h2>
+    <br>
+    <br>
+
+
+    <div class="row" style="margin: auto">
+
+      <div class="col-md-3 col-sm-6 col-xs-12" style="text-align: center">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse0" (click)="setLists()">
+          <div class="info-box" tooltip="Click to View the recipe per serve">
+            <div class="info-box-content" style="text-align:center" id="cutleryIcon">
+              <span class="info-box-text" >SET MENU</span>
+              <span id="cutleryIcon"><i class="fa fa-cutlery fa-4x"></i></span>
+              <div id="collapse0" class="collapse in">
+
+                <div class="list-group">
+                  <div *ngFor="let item of setMenuList" class="">
+                    <a (click)="createRecipe(item.productCode, item.productName)"  class="list-group-item" data-toggle="tooltip" title="Click to view recipe">{{item.productName}}</a>
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+
+
+
+      <div class="col-md-3 col-sm-6 col-xs-12" style="text-align: center">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse1" (click)="setLists()">
+          <div class="info-box" tooltip="Click to View the recipe per serve">
+
+            <div class="info-box-content" id="stroopwafelIcon">
+              <span class="info-box-text">SHORT EATS</span>
+              <i class="fas fa-stroopwafel fa-4x"></i>
+              <div id="collapse1" class="collapse in">
+
+                <div class="list-group">
+                  <div *ngFor="let item of shortEatsList" class="">
+                    <a (click)="createRecipe(item.productCode, item.productName)"  class="list-group-item" data-toggle="tooltip" title="Click to view recipe">{{item.productName}}</a>
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+
+        <div class="col-md-3 col-sm-6 col-xs-12" style="text-align: center">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse2" (click)="setLists()">
+            <div class="info-box" tooltip="Click to View the recipe per serve">
+
+              <div class="info-box-content" id="dessertsIcon">
+                <span class="info-box-text">DESSERTS</span>
+                <i class="fa fa-glass-martini fa-4x"></i>
+                <div id="collapse2" class="collapse in">
+
+                  <div class="list-group">
+                    <div *ngFor="let item of dessertList" class="">
+                      <a (click)="createRecipe(item.productCode, item.productName)"  class="list-group-item" data-toggle="tooltip" title="Click to view recipe">{{item.productName}}</a>
+                    </div>
+
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+
+
+      <div class="col-md-3 col-sm-6 col-xs-12" style="text-align: center">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse3" (click)="setLists()">
+          <div class="info-box" tooltip="Click to View the recipe per serve">
+
+            <div class="info-box-content" id="beveragesIcon">
+              <span class="info-box-text">BEVERAGES</span>
+              <i class="fas fa-beer fa-4x"></i>
+              <div id="collapse3" class="collapse in">
+
+                <div class="list-group">
+                  <div *ngFor="let item of beveragesList" class="">
+                    <a (click)="createRecipe(item.productCode, item.productName)"  class="list-group-item" data-toggle="tooltip" title="Click to view recipe">{{item.productName}}</a>
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-md-3 col-sm-6 col-xs-12" style="text-align: center">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse4" (click)="setLists()">
+          <div class="info-box" tooltip="Click to View the recipe per serve">
+
+            <div class="info-box-content" id="soupIcon">
+              <span class="info-box-text">SOUP</span>
+              <i class="fas fa-coffee fa-4x"></i>
+              <div id="collapse4" class="collapse in">
+
+                <div class="list-group">
+                  <div *ngFor="let item of soupList" class="">
+                    <a (click)="createRecipe(item.productCode, item.productName)"  class="list-group-item" data-toggle="tooltip" title="Click to view recipe">{{item.productName}}</a>
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-md-3 col-sm-6 col-xs-12" style="text-align: center">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse6" (click)="setLists()">
+            <div class="info-box" tooltip="Click to View the recipe per serve">
+
+              <div class="info-box-content" id="saladIcon">
+                <span class="info-box-text">SALADS</span>
+                <i class="fas fa-leaf fa-4x"></i>
+                <div id="collapse6" class="collapse in">
+
+                  <div class="list-group">
+                    <div *ngFor="let item of saladList" class="">
+                      <a (click)="createRecipe(item.productCode, item.productName)" class="list-group-item" data-toggle="tooltip" title="Click to view recipe">{{item.productName}}</a>
+                    </div>
+
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+
+
+      <div class="col-md-3 col-sm-6 col-xs-12" style="text-align: center">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse5" (click)="setLists()">
+          <div class="info-box" tooltip="Click to View the recipe per serve">
+
+            <div class="info-box-content" id="otherIcon">
+              <span class="info-box-text">OTHER</span>
+              <i class="fa fa-birthday-cake fa-4x"></i>
+              <div id="collapse5" class="collapse in">
+
+                <div class="list-group">
+                  <div *ngFor="let item of otherList" class="">
+                    <a (click)="createRecipe(item.productCode, item.productName)"  class="list-group-item" data-toggle="tooltip" title="Click to view recipe">{{item.productName}}</a>
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+
+
+    </div>
+    <br><br>
+    <div class="col-md-1"></div>
+      <button class='btn btn-outline-success' id="mybutton"  (click)="openModal(template)" ><i class='fa fa-plus-square fa-lg'></i>  Add New Food Item</button>
+    <div class="col-md-4"></div>
+    <br><br><br><br>
+
+<!--
+  <div class="panel-group" id="accordion">
+    <div id = "panel1">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse1" (click)="setLists()">
+          Set menu   </a><i class="fa fa-cutlery"></i>
+        </h4>
+      </div>
+      <div id="collapse1" class="panel-collapse collapse in">
+        <div class="panel-body">
+            <div class="list-group">
+                <div *ngFor="let item of setMenuList" class="">
+                    <a href="" [routerLink]="['recipie']"  class="list-group-item" data-toggle="tooltip" title="Click to view recipe">{{item.productName}}</a>
+                  </div>
+                <button (click)="openModal(template)"><i class="fa fa-plus"></i></button>
+              </div>
+        </div>
+      </div>
+    </div>
+
+    <br><br>
+
+    <div id = "panel2">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse2" (click)="setLists()">
+          Short Eats   </a><i class="fa fa-bowling-ball"></i>
+        </h4>
+      </div>
+      <div id="collapse2" class="panel-collapse collapse">
+        <div class="panel-body">
+          <div class="list-group">
+            <div *ngFor="let item of shortEatsList" class="">
+              <a href="" [routerLink]="['recipie']"  class="list-group-item" data-toggle="tooltip" title="Click to view recipe">{{item.productName}}</a></div>
+              <button (click)="openModal(template)"><i class="fa fa-plus"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <br><br>
+      <div id = "panel3">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapse3"(click)="setLists()">
+            Desserts    </a><i class="fa fa-glass-martini"></i>
+          </h4>
+        </div>
+        <div id="collapse3" class="panel-collapse collapse">
+          <div class="panel-body">
+            <div class="list-group">
+              <div *ngFor="let item of dessertList" class="">
+                <a href="" [routerLink]="['recipie']"  class="list-group-item" data-toggle="tooltip" title="Click to view recipe">{{item.productName}}</a></div>
+        <button (click)="openModal(template)"><i class="fa fa-plus"></i></button>
+      </div>
+          </div>
+        </div>
+      </div>
+      <br><br>
+      <div id = "panel4">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapse4" (click)="setLists()">
+              Salad   </a><i class="fa fa-seedling"></i>
+            </h4>
+          </div>
+          <div id="collapse4" class="panel-collapse collapse">
+            <div class="panel-body">
+                <div class="list-group">
+                  <div *ngFor="let item of saladList" class="">
+                      <a href="" [routerLink]="['recipie']"  class="list-group-item" data-toggle="tooltip" title="Click to view recipe">{{item.productName}}</a></div>
+                  <button (click)="openModal(template)"><i class="fa fa-plus"></i></button>
+                </div>
+          </div>
+        </div>
+      </div>
+      <br><br>
+      <div id = "panel5">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapse5" (click)="setLists()">
+              Soup</a>
+            </h4>
+          </div>
+          <div id="collapse5" class="panel-collapse collapse">
+            <div class="panel-body">
+                <div class="list-group">
+                    <div *ngFor="let item of soupList" class="">
+                        <a href="" [routerLink]="['recipie']"  class="list-group-item" data-toggle="tooltip" title="Click to view recipe">{{item.productName}}</a></div>
+                  <button (click)="openModal(template)"><i class="fa fa-plus"></i></button>
+                </div>
+          </div>
+        </div>
+      </div>
+      <br><br>
+      <div id = "panel6">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapse6" (click)="setLists()">
+              Beverages  </a><i class="fa fa-coffee"></i>
+            </h4>
+          </div>
+          <div id="collapse6" class="panel-collapse collapse">
+            <div class="panel-body">
+                <div class="list-group">
+                    <div *ngFor="let item of beveragesList" class="">
+                        <a href="" [routerLink]="['recipie']"  class="list-group-item" data-toggle="tooltip" title="Click to view recipe">{{item.productName}}</a></div>
+                  <button (click)="openModal(template)"><i class="fa fa-plus"></i></button>
+                </div>
+          </div>
+        </div>
+      </div>
+      <br><br>
+      <div id = "panel7">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapse7" (click)="setLists()">
+              Other</a>
+            </h4>
+          </div>
+          <div id="collapse7" class="panel-collapse collapse">
+            <div class="panel-body">
+                <div class="list-group">
+                    <div *ngFor="let item of otherList" class="">
+                        <a href="" [routerLink]="['recipie']"  class="list-group-item" data-toggle="tooltip" title="Click to view recipe">{{item.productName}}</a></div>
+                  <button (click)="openModal(template)"><i class="fa fa-plus"></i></button>
+                </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+
+  </div>-->
+
+<!-- start of modal -->
+  <ng-template #template>
+    <div class="row">
+      <div class="modal-header">
+        <div class="col-sm-2">
+        </div>
+        <div class="col-sm-8">
+            <h4 class="modal-title pull-center" id="myModalLabel"><br><label id="modId"> Add New Food item</label></h4>
+        </div>
+        <div class="col-sm-2">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="modalRef.hide()">
+          <i class="fas fa-window-close fa-2x"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+    <!--modal body-->
+<div class="row">
+<div class="modal-body">
+  <form class="form-horizontal" #productForm = "ngForm" >
+
+
+    <div class="form-group row">
+      <label class="col-sm-3 control-label">Date:</label>
+      <div class="col-sm-9">
+          <input class="form-control" type="date" name="latestUpdate" value="" id="date" #name="ngModel" [(ngModel)]="date" required>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label class="col-sm-3 control-label">Product Name:</label>
+      <div class="col-sm-9">
+        <input class="form-control" type="text" name="productName"  [(ngModel)]="productName" required>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label class="col-sm-3 control-label">Category:</label>
+      <div class="col-sm-9">
+        <select class="form-control" type="text" id="foodCategory" name="foodCategory"  [(ngModel)]="foodCategory">
+          <option>setMenu</option>
+          <option>shortEats</option>
+          <option>desserts</option>
+          <option>salad</option>
+          <option>soup</option>
+          <option>beverages</option>
+          <option>other</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label class="col-sm-3 control-label">Description:</label>
+      <div class="col-sm-9">
+        <input class="form-control" type="text" name="description" id="descripiton"  [(ngModel)]="description" required>
+      </div>
+    </div>
+
+
+
+    <div class="form-group">
+      <div class="row">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-4">
+            <!--input type="submit" class="btn btn-success" value="Add product" [disabled]="!productForm.valid" (click)="addProduct()"-->
+            <button class="btn btn-outline-success" id="addProductBtn" type="submit" [disabled]="!productForm.valid" (click)="addProduct()">Add Product</button>
+            <!--<input type="submit" class="btn btn-warning" value="Create Recipe" (click)="createRecipe()">-->
+          </div>
+          <div class="col-sm-1"></div>
+          <div class="col-sm-4">
+            <button class="btn btn-outline-default" id="cancelProductBtn" type="button" (click)="modalRef.hide()">Cancel</button>
+          </div>
+      </div>
+    </div>
+  </form>
+  </div>
+  </div>
+</ng-template>
+<!-- end of modal -->
+
+
+
+

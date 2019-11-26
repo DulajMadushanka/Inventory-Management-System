@@ -1,0 +1,71 @@
+.btn.btn-outline-success {
+    border: 1px solid;
+    color: white;
+    padding: 12px 16px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100px;
+    background-color: green;
+}
+.btn.btn-outline-primary {
+    border: 1px solid;
+    color: white;
+    padding: 12px 16px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100px;
+    background-color: rgb(14, 102, 153);
+}
+#addRow {
+    border: none;
+    color: white;
+    padding: 12px 16px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.list-group-item:hover{
+    background-color: lightblue;
+}
+
+.list-group-item{
+    max-width: 800pt;
+    max-height: 40pt;
+}
+
+input, select {
+  border-radius: 5px;
+  border-color: #5d809b;
+  height: 35px;
+  font-size: 18px;
+  background-color: rgb(248, 247, 244);
+}
+#inputUp {
+  width: 300px;
+}
+label {
+  font-size: 15px;
+}
+
+#calculateBtn {
+    background-color: rgb(12, 112, 158);
+    width: 100px;
+}
+.btn.btn-outline-primary:hover {
+  box-shadow: 0 12px 16px 0 rgba(84, 118, 230, 0.308), 0 17px 50px 0 rgba(0,0,0,0.5);
+}
+
+.btn.btn-outline-success:hover {
+  box-shadow: 0 12px 16px 0 rgba(66, 223, 46, 0.24), 0 17px 50px 0 rgba(0,0,0,0.5);
+}
+.btn.btn-outline-default:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.5);
+}
+#stockUpdateBreadCrumbBtn:hover{
+  box-shadow: 0 12px 16px 0 rgba(9, 138, 20, 0.432), 0 17px 50px 0 rgba(0,0,0,0.5);
+}
+#inventoryBreadCrumbBtn:hover{
+  box-shadow: 0 12px 16px 0 rgba(28, 103, 201, 0.432), 0 17px 50px 0 rgba(0,0,0,0.5);
+}
+#dashBoardBreadCrumbBtn:hover{
+  box-shadow: 0 12px 16px 0 rgba(27, 116, 199, 0.432), 0 17px 50px 0 rgba(0,0,0,0.5);
+}

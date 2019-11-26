@@ -1,0 +1,143 @@
+
+<section class="content-header">
+  <h1>
+    Purchase Order
+  </h1>
+  <ol class="breadcrumb">
+    <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+    <li><a href="#">Purchase</a></li>
+    <li class="active">Purchase Order</li>
+  </ol>
+</section>
+<div class="container">
+
+  <form (submit) = "createPo()">
+    <br>
+    <br>
+
+
+    <div class="form-group row">
+      <label class="col-sm-2 col-form-label">Vendor</label>
+      <div class="col-sm-10">
+        <input type="text"  [(ngModel)]="vendor" name="vendor" class="form-control">
+      </div>
+    </div>
+
+
+    <div class="form-group row">
+      <label class="col-sm-2 col-form-label">PO Number</label>
+      <div class="col-sm-10">
+        <input type="number" [(ngModel)]="poNo" name="poNo" class="form-control">
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label class="col-sm-2 col-form-label">PO Description</label>
+      <div class="col-sm-10">
+        <input type="text"  [(ngModel)]="description" name="description" class="form-control">
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label class="col-sm-2 col-form-label">Comments</label>
+      <div class="col-sm-10">
+        <textarea rows="3"  [(ngModel)]="comments" name="comments" class="form-control"></textarea>
+      </div>
+    </div>
+    <hr>
+
+
+
+
+
+
+    <br>
+    <br>
+
+    <form class="form-inline al">
+      <div class="form-group ">
+        <label  >Item</label>
+        <input type="text" [(ngModel)]="itemname" name="itemname" class="form-control sp als">
+      </div>
+
+      <div class="form-group ">
+        <label >Unit Price</label>
+        <input type="number"  [(ngModel)]="quantity" name="pQuantity" class="form-control als">
+      </div>
+      <div class="form-group ">
+        <label >qty</label>
+        <input type="number"  [(ngModel)]="unitPr" name="unitPr" class="form-control als">
+      </div>
+
+      <div class="form-group">
+        <button class="btn btn-default " type="button" (click)="Additem()">
+          <i class="fa fa-plus" style="color:green"></i>
+        </button>
+      </div>
+    </form>
+
+    <br>
+    <br>
+    <br>
+    <div class="container">
+      <br>
+
+      <div *ngFor="let item of productitem" class="">
+        <div class="row">
+          <div class="col-md-1 sp">
+
+          </div>
+          <div class="col-md-2">
+            {{item.itemname}}
+          </div>
+          <div class="col-md-2">
+            {{item. quantity}}
+          </div>
+          <div class="col-md-2">
+            {{item.unitPr}}
+          </div>
+          <div class="col-md-2">
+            {{item.total}}
+          </div>
+
+          <div class="col-md-1 am">
+            <button type="button" class="btn btn-default" (click) ="deleteproduct(item._id)" value=" Delete " >
+              <i class="fa fa-remove" style="color:red"></i>
+            </button>
+
+            <br><br>
+          </div>
+
+
+
+        </div >
+
+      </div>
+    </div>
+
+
+    <div class="form-group">
+
+      <div class="pull-right">
+        <button type="submit" class="btn btn-app">
+          <i class="fa fa-check" style="color:green"></i>
+        </button>
+      </div>
+      <div class="pull-right">
+        <button type="button" class="btn btn-app">
+          <i class="fa fa-save" style="color:purple"></i>
+        </button>
+      </div>
+      <div class="pull-right">
+        <button type="button" class="btn btn-app">
+          <i class="fa fa-remove" style="color:red"></i>
+        </button>
+      </div>
+
+    </div>
+
+  </form>
+
+</div>
+
+
